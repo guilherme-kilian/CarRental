@@ -1,0 +1,8 @@
+INSERT INTO city (id, nome) VALUES (1, 'Canoas');
+INSERT INTO city (id, nome) VALUES (2, 'Criciúma');
+INSERT INTO city (id, nome) VALUES (3, 'Curitiba');
+INSERT INTO city (id, nome) VALUES (4, 'Florianópolis');
+INSERT INTO city (id, nome) VALUES (5, 'Lajes');
+INSERT INTO city (id, nome) VALUES (6, 'Pelotas');
+INSERT INTO city (id, nome) VALUES (7, 'Porto Alegre');
+INSERT INTO city (id, nome) VALUES (8, 'São Leopoldo');

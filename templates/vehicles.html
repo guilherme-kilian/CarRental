@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<div class="card">
+    <div class="card-header mt-2">
+        <h4 clas="mt-3">Consultar veículo</h4>
+    </div>
+    <div class="card-body">
+        <form method="POST">
+            {{ form.csrf_token }}
+        
+            <div class="form-group my-3">
+                {{ form.filter.label }}
+                {{ form.filter(class="form-control") }}
+            </div>
+        
+            <div class="form-group my-3">
+                {{ form.value.label }}
+                {{ form.value(class="form-control") }}
+            </div>
+        
+            <div class="form-group my-3">
+                {{ form.submit(class="btn btn-primary btn-lg btn-block") }}
+            </div>
+        </form>
+    <div>
+</div>
+
+{% if vehicles %}
+
+<div class="table-responsive">
+    <table class="table align-middle">
+      <thead>
+        <tr>
+            <th>Modelo</th>
+            <th>Cor</th>
+            <th>Ano</th>
+            <th>Odometro</th>
+            <th>Valor por KM</th>
+            <th>Diária</th>
+            <th>Cidade</th>
+            <th>Disponível</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%for v in vehicles %}  
+            <tr>
+                <td>{{v.model}}</td>
+                <td>{{v.color}}</td>
+                <td>{{v.year}}</td>
+                <td>{{v.odometer}}</td>
+                <td>{{v.kilometer_value}}</td>
+                <td>{{v.daily_value}}</td>
+                <td>{{v.city.name}}</td>
+                <td>{{v.available}}</td>
+            </tr>
+        {%endfor%}
+      </tbody>
+    </table>
+  </div>
+
+{% endif %}
+
+{% endblock %}

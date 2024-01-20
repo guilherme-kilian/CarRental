@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<form method="POST" action="/vehicles/return">
+<div class="card">
+    <div class="card-header mt-2">
+        <h4 clas="mt-3">Realizar devolução</h4>
+    </div>
+    <div class="card-body">        
+            {{ form.csrf_token }}        
+            <div class="form-group my-3">
+                {{ form.customer_name.label }}
+                {{ form.customer_name(class="form-control") }}
+            </div>
+        
+            <div class="form-group my-3">
+                {{ form.destine_city_id.label }}
+                {{ form.destine_city_id(class="form-control") }}
+            </div>
+
+            <div class="form-group my-3">
+                {{ form.km_traveled.label }}
+                {{ form.km_traveled(class="form-control") }}
+            </div>
+        
+            {% if showResume == False %}
+                <div class="form-group my-3">
+                    {{ form.submit(class="btn btn-primary btn-lg btn-block", value="Prosseguir") }}
+                </div>
+            {% endif %}
+        
+    <div>
+</div>
+
+{% if showResume %}
+
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex flex-column">
+            <span>Veículo: {{resume.vehicle.model}}, {{resume.vehicle.year}}</span>
+            <span>Dias alugados: {{resume.rented_days}}</span>
+            <span>Valor das diárias: {{resume.rented_days_value}}</span>
+            <span>Valor do KM rodado: {{resume.km_traveled_value}}</span>
+            <span>Valor total: {{resume.total}}</span>
+        </div>
+        {% if showResume == True %}
+        <div class="my-3">
+            {{ form.return_vehicle() }} {{ form.return_vehicle.label }}
+        </div>
+            {{ form.submit(class="btn btn-primary") }}
+        {% endif %}
+    </div>
+</div>
+
+{% endif %}
+
+</form>
+
+{% endblock %}

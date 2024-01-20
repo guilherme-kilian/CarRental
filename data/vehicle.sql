@@ -1,0 +1,10 @@
+INSERT INTO vehicle (id, modelo, cor, ano, odometro, id_cidade, disponivel, valor_diaria, valor_km_rodado) VALUES (1, 'Gol', 'Cinza', 2016, 137852, 7, 'S', 108.67, 0.93);
+INSERT INTO vehicle (id, modelo, cor, ano, odometro, id_cidade, disponivel, valor_diaria, valor_km_rodado) VALUES (2, 'Up', 'Branco', 2017, 86541, 8, 'N', 70.12, 0.47);
+INSERT INTO vehicle (id, modelo, cor, ano, odometro, id_cidade, disponivel, valor_diaria, valor_km_rodado) VALUES (3, 'Argo', 'Preto', 2019, 42876, 1, 'S', 121.4, 1.02);
+INSERT INTO vehicle (id, modelo, cor, ano, odometro, id_cidade, disponivel, valor_diaria, valor_km_rodado) VALUES (4, 'Mobi', 'Vermelho', 2018, 61907, 3, 'S', 76.19, 0.39);
+INSERT INTO vehicle (id, modelo, cor, ano, odometro, id_cidade, disponivel, valor_diaria, valor_km_rodado) VALUES (5, 'Gol', 'Azul', 2019, 49389, 2, 'N', 77.47, 0.51);
+INSERT INTO vehicle (id, modelo, cor, ano, odometro, id_cidade, disponivel, valor_diaria, valor_km_rodado) VALUES (6, 'Onix', 'Prata', 2017, 77635, 4, 'N', 78.74, 0.55);
+INSERT INTO vehicle (id, modelo, cor, ano, odometro, id_cidade, disponivel, valor_diaria, valor_km_rodado) VALUES (7, 'Sandero', 'Cinza', 2019, 34518, 8, 'S', 82.61, 0.64);
+INSERT INTO vehicle (id, modelo, cor, ano, odometro, id_cidade, disponivel, valor_diaria, valor_km_rodado) VALUES (8, 'Duster', 'Branco', 2018, 57114, 7, 'S', 118.17, 1.05);
+INSERT INTO vehicle (id, modelo, cor, ano, odometro, id_cidade, disponivel, valor_diaria, valor_km_rodado) VALUES (9, 'Cruze', 'Preto', 2020, 8013, 6, 'N', 120.63, 1.08);
+INSERT INTO vehicle (id, modelo, cor, ano, odometro, id_cidade, disponivel, valor_diaria, valor_km_rodado) VALUES (10, 'Argo', 'Vermelho', 2017, 106857, 5, 'S', 91.96, 0.63);

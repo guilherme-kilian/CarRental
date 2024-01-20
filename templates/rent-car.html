@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<div class="card">
+    <div class="card-header mt-2">
+        <h4 clas="mt-3">Alugar veículo</h4>
+    </div>
+    <div class="card-body">
+        <form method="POST" action="/vehicles/rent">
+            {{ form.csrf_token }}
+        
+            <div class="form-group my-3">
+                {{ form.customerId.label }}
+                {{ form.customerId(class="form-control") }}
+            </div>
+        
+            <div class="form-group my-3">
+                {{ form.originCityId.label }}
+                {{ form.originCityId(class="form-control") }}
+            </div>
+        
+            <div class="form-group my-3">
+                {{ form.submit(class="btn btn-primary btn-lg btn-block") }}
+            </div>
+        </form>
+    <div>
+</div>
+
+{% if formRent %}
+<form method="POST" action="/vehicles/rent/add">
+
+    {{ formRent.customerId() }}
+
+    {{ formRent.originCityId() }}
+
+    {{ form.csrf_token }}
+
+    <div class="table-responsive">
+        <table class="table align-middle">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Modelo</th>
+                <th>Cor</th>
+                <th>Ano</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for value, label in formRent.vehicles.choices %}
+            <tr>
+                <td><input type="radio" name="{{ formRent.vehicles.name }}" value="{{ value }}"></td>            
+                <td>{{label}}</td>
+                <td><span data-vehicle={{value}} class="car-color" name="color-{{value}}"></span></td>
+                <td><span data-vehicle={{value}} name="year-{{value}}"></td>                
+            </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+
+    <div class="form-group my-3">
+        {{ formRent.rented_days.label }}
+        {{ formRent.rented_days(class="form-control", min="1") }}
+    </div>
+
+    <div class="form-group my-3">
+        {{ formRent.submit(class="btn btn-primary btn-lg btn-block") }}
+    </div>
+
+</form>
+
+{% endif %}
+
+{% endblock %}

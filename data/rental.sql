@@ -1,0 +1,11 @@
+use carrental;
+INSERT INTO rental (id, vehicle_id, customer_id, origin_city_id, destine_city_id, kilometer_traveled, rented_days, finished) VALUES (1, 3, 2, 1, 1, 291, 2 true);
+INSERT INTO rental (id, vehicle_id, customer_id, origin_city_id, destine_city_id, kilometer_traveled, rented_days, finished) VALUES (2, 8, 3, 1, 7, 917, 4 true);
+INSERT INTO rental (id, vehicle_id, customer_id, origin_city_id, destine_city_id, kilometer_traveled, rented_days, finished) VALUES (3, 1, 1, 1, 7, 674, 3 true);
+INSERT INTO rental (id, vehicle_id, customer_id, origin_city_id, destine_city_id, kilometer_traveled, rented_days, finished) VALUES (4, 4, 6, 6, 3, 1433, 5 true);
+INSERT INTO rental (id, vehicle_id, customer_id, origin_city_id, destine_city_id, kilometer_traveled, rented_days, finished) VALUES (5, 9, 3, 6, NULL, NULL, 5, false);
+INSERT INTO rental (id, vehicle_id, customer_id, origin_city_id, destine_city_id, kilometer_traveled, rented_days, finished) VALUES (6, 10, 6, 2, 5, 545, 4 true);
+INSERT INTO rental (id, vehicle_id, customer_id, origin_city_id, destine_city_id, kilometer_traveled, rented_days, finished) VALUES (7, 6, 1, 4, NULL, NULL, 4, false);
+INSERT INTO rental (id, vehicle_id, customer_id, origin_city_id, destine_city_id, kilometer_traveled, rented_days, finished) VALUES (8, 7, 5, 8, 8, 478, 2, true);
+INSERT INTO rental (id, vehicle_id, customer_id, origin_city_id, destine_city_id, kilometer_traveled, rented_days, finished) VALUES (9, 2, 5, 8, NULL, NULL, 6, false);
+INSERT INTO rental (id, vehicle_id, customer_id, origin_city_id, destine_city_id, kilometer_traveled, rented_days, finished) VALUES (10, 5, 4, 2, NULL, NULL, 3, false);

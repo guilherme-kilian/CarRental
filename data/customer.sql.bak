@@ -1,0 +1,6 @@
+INSERT INTO customer (id, nome) VALUES (1, 'Ana');
+INSERT INTO customer (id, nome) VALUES (2, 'Ivan');
+INSERT INTO customer (id, nome) VALUES (3, 'Marcos');
+INSERT INTO customer (id, nome) VALUES (4, 'Maria');
+INSERT INTO customer (id, nome) VALUES (5, 'Pedro');
+INSERT INTO customer (id, nome) VALUES (6, 'Sofia');
